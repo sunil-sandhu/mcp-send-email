@@ -24,7 +24,7 @@ The project is a microservice that:
 
 ## Setup Instructions
 
-0. Create a MCP server configuration file (e.g., `mcp.json`).
+1. Create a MCP server configuration file (e.g., `mcp.json`).
 
 To get MCPs to work with IDEs such as Cursor, they need an MCP server configuration file.
 
@@ -59,16 +59,17 @@ To add the MCP server config in Cursor, go to Cursor > Settings > MCP Servers an
 }
 ```
 
-1. Clone the repository
-2. Install dependencies:
+2. Create a free Notify.cx account and get an API key.
+3. Clone the repository
+4. Install dependencies:
    ```bash
    npm install
    ```
-3. Create a `.env` file with the following variables:
+5. Create a `.env` file with the following variables:
    ```
    NOTIFY_API_KEY=your_api_key_here
    ```
-4. Start the server:
+6. Start the server:
    ```bash
    npm start
    ```
