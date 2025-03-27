@@ -40,7 +40,7 @@ To add the MCP server config in Cursor, go to Cursor > Settings > MCP Servers an
       "version": "1.0.0",
       "url": "http://localhost:8080/sse",
       "env": {
-        "NOTIFY_API_KEY": "332bc089-a5fb-4e30-9a31-1f29243250c1"
+        "NOTIFY_API_KEY": "<your-notify-api-key>"
       },
       "tools": [
         {
