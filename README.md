@@ -24,6 +24,41 @@ The project is a microservice that:
 
 ## Setup Instructions
 
+0. Create a MCP server configuration file (e.g., `mcp.json`).
+
+To get MCPs to work with IDEs such as Cursor, they need an MCP server configuration file.
+
+The MCP server configuration file is a JSON file that describes the MCP server and the tools it supports.
+
+To add the MCP server config in Cursor, go to Cursor > Settings > MCP Servers and add the following:
+
+```json
+{
+  "mcpServers": {
+    "email-sending-service": {
+      "name": "email-sending-service",
+      "version": "1.0.0",
+      "url": "http://localhost:8080/sse",
+      "env": {
+        "NOTIFY_API_KEY": "332bc089-a5fb-4e30-9a31-1f29243250c1"
+      },
+      "tools": [
+        {
+          "name": "send-email",
+          "description": "Send an email using Notify",
+          "url": "http://localhost:8080/send-email",
+          "params": {
+            "to": "string",
+            "subject": "string",
+            "message": "string"
+          }
+        }
+      ]
+    }
+  }
+}
+```
+
 1. Clone the repository
 2. Install dependencies:
    ```bash
